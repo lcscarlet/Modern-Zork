@@ -7,13 +7,23 @@
 #include "melee.h"
 #include "game.h"
 #include <curses.h>
+//#include <stdio>
 
 int main() {
     // Initialize ncurses
+
+    //TODO: Actually read the ncurses documentation and figure this out
     initscr();
     cbreak();
     noecho();
     keypad(stdscr, TRUE);
+
+//===========================================================================
+//Here would go the beginning of a stdio implementation instead of ncurses...
+//Problems: readLine() still reads from cin
+//
+//===========================================================================
+    
 
     // Initialize all subsystems
     world::init();    // set up world state, fix object flags
